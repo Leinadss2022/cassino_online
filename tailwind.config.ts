@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -24,6 +25,13 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				casino: {
+					gold: '#D4AF37',
+					darkblue: '#1E293B',
+					lightblue: '#E0F2FE',
+					charcoal: '#222222',
+					cream: '#FAF9F6',
+				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
@@ -84,12 +92,82 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+                'float': {
+                    '0%, 100%': {
+                        transform: 'translateY(0)',
+                    },
+                    '50%': {
+                        transform: 'translateY(-10px)',
+                    },
+                },
+                'pulse-subtle': {
+                    '0%, 100%': {
+                        opacity: '1',
+                    },
+                    '50%': {
+                        opacity: '0.8',
+                    },
+                },
+                'slide-up': {
+                    '0%': {
+                        transform: 'translateY(100%)',
+                        opacity: '0',
+                    },
+                    '100%': {
+                        transform: 'translateY(0)',
+                        opacity: '1',
+                    },
+                },
+                'slide-down': {
+                    '0%': {
+                        transform: 'translateY(-100%)',
+                        opacity: '0',
+                    },
+                    '100%': {
+                        transform: 'translateY(0)',
+                        opacity: '1',
+                    },
+                },
+                'fade-in': {
+                    '0%': {
+                        opacity: '0',
+                    },
+                    '100%': {
+                        opacity: '1',
+                    },
+                },
+                'fade-out': {
+                    '0%': {
+                        opacity: '1',
+                    },
+                    '100%': {
+                        opacity: '0',
+                    },
+                },
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
-			}
+				'accordion-up': 'accordion-up 0.2s ease-out',
+                'float': 'float 6s ease-in-out infinite',
+                'pulse-subtle': 'pulse-subtle 4s ease-in-out infinite',
+                'slide-up': 'slide-up 0.6s ease-out',
+                'slide-down': 'slide-down 0.6s ease-out',
+                'fade-in': 'fade-in 0.4s ease-out',
+                'fade-out': 'fade-out 0.4s ease-out',
+			},
+            fontFamily: {
+                'sans': ['Inter', 'system-ui', 'sans-serif'],
+                'serif': ['Georgia', 'serif'],
+            },
+            backgroundImage: {
+                'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                'casino-pattern': "url('/assets/pattern.svg')",
+                'glass-gradient': 'linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3))',
+            },
+            backdropFilter: {
+                'blur': 'blur(10px)',
+            },
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
