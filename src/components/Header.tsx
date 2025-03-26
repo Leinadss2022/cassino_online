@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Menu, X, User, LogIn, Home, CreditCard, Dice } from "lucide-react";
+import { Menu, X, User, LogIn, Home, CreditCard, Dice1 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Header = () => {
@@ -47,7 +47,7 @@ const Header = () => {
             transition={{ duration: 0.5 }}
             className="flex items-center"
           >
-            <Dice className="h-8 w-8 text-casino-gold" />
+            <Dice1 className="h-8 w-8 text-casino-gold" />
             <span className="text-2xl font-bold bg-gradient-to-r from-casino-gold to-yellow-500 text-transparent bg-clip-text ml-2">
               LuxCasino
             </span>
@@ -119,7 +119,7 @@ const Header = () => {
             </MobileNavLink>
             <MobileNavLink
               to="/games"
-              icon={<Dice size={18} />}
+              icon={<Dice1 size={18} />}
               active={isActive("/games")}
               onClick={closeMobileMenu}
             >

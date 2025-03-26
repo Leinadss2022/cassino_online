@@ -2,7 +2,7 @@
 import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { ChevronRight, Shield, Trophy, Zap, CreditCard, Users, Dice } from "lucide-react";
+import { ChevronRight, Shield, Trophy, Zap, CreditCard, Users, Dice1 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -94,7 +94,7 @@ const Index = () => {
         "Our dedicated customer support team is available around the clock to assist you with any questions or concerns.",
     },
     {
-      icon: <Dice className="h-10 w-10 text-casino-gold" />,
+      icon: <Dice1 className="h-10 w-10 text-casino-gold" />,
       title: "Fair Gaming",
       description:
         "All our games are regularly audited by independent testing agencies to ensure fairness and random outcomes.",
